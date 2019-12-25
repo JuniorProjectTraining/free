@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+body {
+	margin: 0;
+	height: 100vh;
+}
+
+.nn {
+	font-family: "楷体";
+	font-size: 30px;
+	color: cyan;
+}
+
+#n {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	width: 200px;
+	height: 300px;
+	border-radius: 32px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#beijing {
+	background-image: url(./image/parallex.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 100%;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div id="beijing">
+		<img id="n" src="./image/ali_27.jpeg">
+		<h1 Style="text-align: center;">登录</h1>
+		<hr width="80%">
+
+		<form style="text-align: center;"
+			action="${pageContext.request.contextPath }/EmpServlet?cmd=login"
+			method="post">
+			<p class="nn">
+				昵称：<input id="username" name="nickname" placeholder="请输入昵称" /> <br>
+				密码：<input type="password" id="password" name="password"
+					placeholder="请输入密码"/ > <br> <input type="submit"
+					value="登录" />
+			</p>
+		</form>
+	</div>
+</body>
+</html>

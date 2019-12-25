@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查询界面</title>
+</head>
+<body>
+<ul>
+        <%
+        	ShowService showService = new ShowService();
+        	for (User user : showService.getUserList()) {
+        %>
+        <li>
+           	<p><span>编号：</span><%= user.getIdnumber() %></p>
+           	<p><span>昵称：</span><%= user.getUsername() %></p>
+           	<p><span>密码：</span><%= user.getPassword() %></p>
+           	<p><span>电话：</span><%= user.getPhonenumber() %></p>
+        </li>
+        <hr/>
+        <%
+        	}
+        %>
+    </ul>
+</body>
+</html>

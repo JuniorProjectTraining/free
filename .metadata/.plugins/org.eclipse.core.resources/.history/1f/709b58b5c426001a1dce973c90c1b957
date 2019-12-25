@@ -1,0 +1,5 @@
+package com.zr.emss.dao;
+
+public class IEmpDap {
+
+}

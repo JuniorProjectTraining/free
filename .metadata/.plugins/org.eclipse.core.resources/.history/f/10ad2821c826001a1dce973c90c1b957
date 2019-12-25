@@ -1,0 +1,5 @@
+# key=value
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql:///ems?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+username=root
+password=root

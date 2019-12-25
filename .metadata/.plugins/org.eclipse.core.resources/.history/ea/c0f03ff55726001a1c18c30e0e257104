@@ -1,0 +1,15 @@
+package com.zr.emss.web;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+
+@WebServlet("/EmpServlet")
+public class EmpServlet {
+	
+	@Override
+	protected void service(HttpServletRequest req, HttpServletRequest resp) {
+		
+		req.setCharacterEncoding("utf-8");
+		resp.se
+	}
+}

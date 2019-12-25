@@ -1,0 +1,18 @@
+package com.ze.emss.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.zr.emss.dao.IEmpDao;
+import com.zr.emss.pojo.Emp;
+import com.zr.emss.utils.MyDBUtils;
+
+/**
+ * 持久层的实现类
+ *
+ */
+public class EmpDao {
+
+}

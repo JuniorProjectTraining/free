@@ -1,0 +1,85 @@
+package shiyan;
+
+import java.util.Scanner;
+
+public class showMainMenu() {
+	boolean falg = true; //定义一个boolean的值让循环停下来
+
+    Scanner input  = new Scanner(System.in); //用来接收数字
+    Scanner input1 = new Scanner(System.in); //用来接收字符
+
+    //创建并保存对象
+    Product product1 = new Product();
+
+    //创建对象调用方法
+    ProductDAOImpl pdi = new ProductDAOImpl();
+    		
+    while(falg){
+        System.out.println("**********小商品系统*************");
+        System.out.println("1:录入商品信息");
+        System.out.println("2:展示所有商品信息");
+        System.out.println("3：根据id查找商品");
+        System.out.println("4:商品入库");
+        System.out.println("5：商品出库");
+        System.out.println("6:删除指定商品");
+        System.out.println("7:退出系统");
+        System.out.print("请输入你的选择:");
+
+        int num = input.nextInt();
+        switch(num){
+        case 1:{
+
+            System.out.print("请输入id");
+            int pid = input.nextInt();
+            System.out.print("请输入名称");
+            String pname = input1.nextLine();
+            System.out.print("请输入价格");
+            double price = input.nextDouble();
+            System.out.print("请输入数量");
+            int count = input.nextInt();
+
+            product1 = new Product(pid, pname, price, count);
+            pdi.addProduct(product1);
+
+        }break;
+        case 2:{
+            pdi.showAllProduct();
+        }break;
+
+        case 3:{
+            System.out.println("请输入要查找的id");
+            int num1 = input.nextInt();
+            pdi.finfProductById(num1);
+            System.out.println(product1);
+
+        }break;
+        case 4:{
+             System.out.println("请选择您要入库的商品id:");
+             int num2 = input.nextInt();
+             System.out.println("请选择您要入库的数量：");
+             int num3 = input.nextInt();
+             pdi.inPrduct(num2, num3);
+
+        }break;
+        case 5:{
+            System.out.println("请选择您要出库的商品的id:");
+            int num2 = input.nextInt(); 
+            System.out.println("请选择您要出库的数量");
+            int num3 = input.nextInt();
+            pdi.outPrduct(num2, num3);
+
+        }break;
+        case 6:{
+            System.out.println("请选择您要删除的商品信息");
+            int num2 = input.nextInt();
+            pdi.deleteProduct(num2);
+        }break;
+        case 7:{
+            System.out.println("欢迎下次使用");
+            falg = false;
+
+        }break;
+        }
+
+    }
+}

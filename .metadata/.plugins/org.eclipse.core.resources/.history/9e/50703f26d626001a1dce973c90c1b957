@@ -1,0 +1,18 @@
+package com.zr.emss.service;
+
+import com.zr.emss.pojo.Emp;
+
+/**
+ * 服务接口 
+ *
+ */
+public class IEmpService {
+	/**
+	 * 通过昵称和密码查找emp对象
+	 * @param nickname
+	 * @param password
+	 * @return
+	 */
+	Emp findEmpByNicknameAndPassword(String nickname, String password);
+	
+}

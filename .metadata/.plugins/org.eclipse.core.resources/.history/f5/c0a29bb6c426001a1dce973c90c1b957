@@ -1,0 +1,5 @@
+package com.zr.emss.service;
+
+public class IEmpService {
+
+}

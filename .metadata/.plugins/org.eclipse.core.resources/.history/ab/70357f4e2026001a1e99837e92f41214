@@ -1,0 +1,29 @@
+package smill;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HelloServlet extends HttpServlet {
+	
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.service(req, resp);
+		//设置请求的编码
+		req.setCharacterEncoding("utf-8");
+		
+		//告诉客户端如何解析服务器发送的响应（反馈）
+		resp.setContentType("text/html;charset=utf-8");
+		
+		//接受请求中的name参数
+		String name = req.getParameter("name");
+		System.out.print(name);
+		
+		//服务器向客户端发送响应信息
+		resp.getWriter().write(name);
+	}
+}

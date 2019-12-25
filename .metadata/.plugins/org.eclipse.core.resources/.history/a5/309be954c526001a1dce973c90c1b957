@@ -1,0 +1,5 @@
+package com.ze.emss.dao.impl;
+
+public class EmpDao {
+
+}
